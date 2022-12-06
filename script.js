@@ -1,4 +1,5 @@
 var nextEl = document.querySelector('#next');
+var optionsEl = document.querySelector('.options');
 var cursor = 0;
 
 var questions = [
@@ -9,18 +10,41 @@ var questions = [
   "In what city will the 2022 World Cup be located?"
 ];
 
+
 var displayQuestion = function () {
   nextEl.textContent = questions[cursor];
 };
 
-var advance = function() {
+var quesAdvance = function() {
   if (cursor < questions.length - 1) {
     cursor++; 
     displayQuestion();
   }
- 
+  
 };
 
-nextEl.addEventListener('click', advance);
+var displayAnswers = function() {
+  optionsEl = 
+}
+
+var ansAdvance
+
+var choiceSetOne = [
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "Option 4"
+]
+
+var choiceSetTwo = [
+  "Option 5",
+  "Option 6",
+  "Option 7",
+  "Option 8"  
+]
+
+var answerChoices = {choiceSetOne,choiceSetTwo};
+
+nextEl.addEventListener('click', quesAdvance);
 
 displayQuestion();
